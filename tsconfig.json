@@ -9,6 +9,11 @@
     "noImplicitReturns": true,
     "noFallthroughCasesInSwitch": true,
     "skipLibCheck": true,
+    "paths": {
+      "ngx-search-dropdown": [
+        "./dist/ngx-search-dropdown"
+      ]
+    },
     "esModuleInterop": true,
     "sourceMap": true,
     "declaration": false,

@@ -1,0 +1,16 @@
+{
+  "name": "ngx-search-dropdown101",
+  "version": "0.0.6",
+  "scripts": {
+    "build:dev": "ng build ngx-search-dropdown --watch --configuration development",
+    "build:prod": "ng build ngx-search-dropdown"
+  },
+  "peerDependencies": {
+    "@angular/common": "^17.3.0",
+    "@angular/core": "^17.3.0"
+  },
+  "dependencies": {
+    "tslib": "^2.3.0"
+  },
+  "sideEffects": false
+}

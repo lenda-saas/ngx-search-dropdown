@@ -1,0 +1,27 @@
+<section>
+  <div class="input-wrapper">
+    @if (selectedColumn && inputValue.length > 0) {
+    <div class="prefix badge">By: {{ selectedColumn }}</div>
+    }
+    <input
+      type="text"
+      [placeholder]="placeholder"
+      [(ngModel)]="inputValue"
+      (focus)="focused()"
+      (keyup)="onKeyUp()"
+    />
+  </div>
+
+  @if (inputValue.length > 0 && searchColumns.length > 0 && showDropdown()) {
+  <div class="dropdown">
+    @for (item of searchColumns; track $index) {
+    <span class="dropdown-item" (click)="onSelect(item)">
+      <span>{{ inputValue }} <span style="margin: 0 5px;">By:</span></span>
+      <span class="badge">
+        {{ item }}
+      </span>
+    </span>
+    }
+  </div>
+  }
+</section>
