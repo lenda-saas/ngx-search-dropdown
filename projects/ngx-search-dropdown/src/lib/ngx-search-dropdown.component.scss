@@ -2,6 +2,7 @@ section{
   font-size: 14px;
   width: 100%;
   background-color: var(--nsd-bg-color);
+  position: relative;
   .input-wrapper{
     display: flex;
     align-items: center;
@@ -24,8 +25,11 @@ section{
   .dropdown{
     margin-top: 10px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.075);
-    background: transparent !important;
+    background: var(--nsd-bg-color) !important;
     color: var(--nsd-text-color);
+    position: absolute;
+    width: 100%;
+    right: 0;
     .dropdown-item{
       display: flex;
       flex-wrap: wrap;
