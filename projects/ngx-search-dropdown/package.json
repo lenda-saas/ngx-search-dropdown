@@ -1,6 +1,6 @@
 {
   "name": "ngx-search-dropdown",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "scripts": {
     "build:dev": "ng build ngx-search-dropdown --watch --configuration development",
     "build:prod": "ng build ngx-search-dropdown"
