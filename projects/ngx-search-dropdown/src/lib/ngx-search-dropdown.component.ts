@@ -56,8 +56,8 @@ export class NgxSearchDropdownComponent implements OnInit, OnChanges {
 
   ngOnChanges(changes: SimpleChanges): void {
     if (
-      changes['theme'].currentValue?.mode !==
-      changes['theme'].previousValue?.mode
+      changes['theme']?.currentValue?.mode !==
+      changes['theme']?.previousValue?.mode
     ) {
       this.setThemeColors();
     }
