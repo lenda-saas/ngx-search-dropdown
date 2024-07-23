@@ -33,7 +33,7 @@ section{
       display: flex;
       flex-wrap: wrap;
       align-items: center;
-      padding: 10px;
+      padding: 10px 17px;
       cursor: pointer;
 
       &:hover{
@@ -52,7 +52,8 @@ section{
   .badge{
     background-color: var(--nsd-primary-color);
     color: var(--nsd-accent-color) !important;
-    padding: 5px 9px;
-    border-radius: 11px;
+    padding: 6px 9px;
+    border-radius: 5px;
+    margin-left: 15px;
   }
 }

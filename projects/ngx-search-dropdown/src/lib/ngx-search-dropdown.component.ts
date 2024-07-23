@@ -1,7 +1,9 @@
 import { CommonModule } from '@angular/common';
 import {
   Component,
+  ElementRef,
   EventEmitter,
+  HostListener,
   Input,
   OnChanges,
   OnInit,
@@ -43,6 +45,15 @@ export class NgxSearchDropdownComponent implements OnInit, OnChanges {
 
   selectedColumn!: string;
 
+  constructor(private el:ElementRef){}
+
+  @HostListener('document:click', ['$event'])
+  clickOut(event:Event){
+    if (!this.el.nativeElement.contains(event.target)) {
+      this.showDropdown.set(false);
+    }
+  }
+
   ngOnChanges(changes: SimpleChanges): void {
     if (
       changes['theme'].currentValue?.mode !==
@@ -58,7 +69,6 @@ export class NgxSearchDropdownComponent implements OnInit, OnChanges {
 
   private setThemeColors() {
     document.documentElement.style.setProperty('--nsd-text-dark', '#000');
-    //make badge whiye on dark mode and also fix sizing and font size, performaction event type, close dropdown on click out
     if (!this.theme?.mode) {
       this.theme = { ...this.theme, mode: 'light' };
     }
