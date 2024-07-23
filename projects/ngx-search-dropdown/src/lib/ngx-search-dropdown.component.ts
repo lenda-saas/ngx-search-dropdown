@@ -1,5 +1,14 @@
 import { CommonModule } from '@angular/common';
-import { Component, EventEmitter, Input, OnChanges, OnInit, Output, signal, SimpleChanges } from '@angular/core';
+import {
+  Component,
+  EventEmitter,
+  Input,
+  OnChanges,
+  OnInit,
+  Output,
+  signal,
+  SimpleChanges,
+} from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { SelectedItem } from '../ngx-search-dropdown.types';
 
@@ -9,7 +18,7 @@ export type Theme = {
   accentColor?: string;
   textLight?: string;
   textBlack?: string;
-  mode?: 'light' | 'dark'
+  mode?: 'light' | 'dark';
 };
 
 @Component({
@@ -17,15 +26,14 @@ export type Theme = {
   standalone: true,
   imports: [CommonModule, FormsModule],
   templateUrl: './ngx-search-dropdown.component.html',
-  styleUrl: './ngx-search-dropdown.component.scss'
+  styleUrl: './ngx-search-dropdown.component.scss',
 })
-
 export class NgxSearchDropdownComponent implements OnInit, OnChanges {
-  @Input() searchColumns:string[] = [];
+  @Input() searchColumns: string[] = [];
 
-  @Input() placeholder = "Enter Keyword";
+  @Input() placeholder = 'Enter Keyword';
 
-  @Input() theme!:Theme;
+  @Input() theme!: Theme;
 
   @Output() selectedItem = new EventEmitter<SelectedItem | null>();
 
@@ -33,79 +41,76 @@ export class NgxSearchDropdownComponent implements OnInit, OnChanges {
 
   showDropdown = signal(false);
 
-  selectedColumn!:string;
+  selectedColumn!: string;
 
   ngOnChanges(changes: SimpleChanges): void {
-    this.setThemeColors();
+    if (
+      changes['theme'].currentValue?.mode !==
+      changes['theme'].previousValue?.mode
+    ) {
+      this.setThemeColors();
+    }
   }
 
   ngOnInit(): void {
     this.setThemeColors();
   }
 
-  private setThemeColors(){
-    document.documentElement.style.setProperty(
-      '--nsd-text-dark','#000',
-    );
-
+  private setThemeColors() {
+    document.documentElement.style.setProperty('--nsd-text-dark', '#000');
+    //make badge whiye on dark mode and also fix sizing and font size, performaction event type, close dropdown on click out
     if (!this.theme?.mode) {
-      this.theme = {...this.theme,mode:'light'};
+      this.theme = { ...this.theme, mode: 'light' };
     }
     if (this.theme?.primaryColor) {
       document.documentElement.style.setProperty(
-        '--nsd-accent-color',this.theme?.primaryColor
-      );
-
-      document.documentElement.style.setProperty(
         '--nsd-primary-color',
-        this.lightenColor(this.theme?.primaryColor,45)
+        this.lightenColor(this.theme?.primaryColor, 45)
       );
     } else {
       document.documentElement.style.setProperty(
-        '--nsd-primary-color','#f1f1f1'
+        '--nsd-primary-color',
+        '#f1f1f1'
       );
     }
 
     if (this.theme?.mode === 'light') {
-      document.documentElement.style.setProperty(
-        '--nsd-bg-color', '#fff',
-      );
+      document.documentElement.style.setProperty('--nsd-bg-color', '#fff');
 
       document.documentElement.style.setProperty(
         '--nsd-text-color',
-        this.theme?.textLight || '#000',
+        this.theme?.textLight || '#000'
       );
 
       if (!this.theme.primaryColor) {
         document.documentElement.style.setProperty(
-          '--nsd-accent-color','#000',
+          '--nsd-accent-color',
+          '#000'
+        );
+      } else {
+        document.documentElement.style.setProperty(
+          '--nsd-accent-color',
+          this.theme.primaryColor
         );
       }
-
     }
 
     if (this.theme?.mode === 'dark') {
-      document.documentElement.style.setProperty(
-        '--nsd-bg-color', '#181818',
-      );
+      document.documentElement.style.setProperty('--nsd-bg-color', '#181818');
 
       document.documentElement.style.setProperty(
         '--nsd-text-color',
-        this.theme?.textBlack || '#fff',
+        this.theme?.textBlack || '#fff'
       );
 
-      if (!this.theme.primaryColor) {
-        document.documentElement.style.setProperty(
-          '--nsd-accent-color','#f1f1f1',
-        );
-      }
+      document.documentElement.style.setProperty(
+        '--nsd-accent-color',
+        '#f1f1f1'
+      );
     }
   }
 
-  private lightenColor (
-    hexCode: string,
-    lightenAmount: number,
-  ): string {
+  private lightenColor(hexCode: string, lightenAmount: number): string {
     const transparencyPairs: { [key: number]: string } = {
       100: 'FF',
       99: 'FC',
@@ -210,21 +215,21 @@ export class NgxSearchDropdownComponent implements OnInit, OnChanges {
       0: '00',
     };
     return `${hexCode}${transparencyPairs[lightenAmount]}`;
-  };
+  }
 
-  onSelect(column:string){
+  onSelect(column: string) {
     this.selectedColumn = column;
-    this.selectedItem.emit({value:this.inputValue,column});
+    this.selectedItem.emit({ value: this.inputValue, column });
     this.showDropdown.set(false);
   }
 
-  focused(){
-    this.showDropdown.set(true)
+  focused() {
+    this.showDropdown.set(true);
   }
 
-  onKeyUp(){
+  onKeyUp() {
     if (this.inputValue.length === 0) {
-    this.selectedItem.emit(null);
+      this.selectedItem.emit(null);
     }
   }
 }

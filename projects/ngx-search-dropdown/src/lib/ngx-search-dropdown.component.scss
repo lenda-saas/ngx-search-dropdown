@@ -23,7 +23,6 @@ section{
   }
 
   .dropdown{
-    margin-top: 10px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.075);
     background: var(--nsd-bg-color) !important;
     color: var(--nsd-text-color);
@@ -34,8 +33,7 @@ section{
       display: flex;
       flex-wrap: wrap;
       align-items: center;
-      margin-bottom: 10px;
-      padding: 10px 0;
+      padding: 10px;
       cursor: pointer;
 
       &:hover{
@@ -48,16 +46,13 @@ section{
             }
         }
       }
-      span{
-        padding: 10px;
-      }
     }
   }
 
   .badge{
     background-color: var(--nsd-primary-color);
     color: var(--nsd-accent-color) !important;
-    padding: 10px;
-    border-radius: 6px;
+    padding: 5px 9px;
+    border-radius: 11px;
   }
 }
