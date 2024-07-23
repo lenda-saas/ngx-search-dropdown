@@ -44,10 +44,18 @@ export class NgxSearchDropdownComponent implements OnInit, OnChanges {
   }
 
   private setThemeColors(){
+    document.documentElement.style.setProperty(
+      '--nsd-text-dark','#000',
+    );
+
     if (!this.theme?.mode) {
       this.theme = {...this.theme,mode:'light'};
     }
     if (this.theme?.primaryColor) {
+      document.documentElement.style.setProperty(
+        '--nsd-accent-color',this.theme?.primaryColor
+      );
+
       document.documentElement.style.setProperty(
         '--nsd-primary-color',
         this.lightenColor(this.theme?.primaryColor,45)
@@ -57,10 +65,6 @@ export class NgxSearchDropdownComponent implements OnInit, OnChanges {
         '--nsd-primary-color','#f1f1f1'
       );
     }
-
-    document.documentElement.style.setProperty(
-      '--nsd-text-dark','#000',
-    );
 
     if (this.theme?.mode === 'light') {
       document.documentElement.style.setProperty(
@@ -72,12 +76,7 @@ export class NgxSearchDropdownComponent implements OnInit, OnChanges {
         this.theme?.textLight || '#000',
       );
 
-      if (this.theme.primaryColor) {
-        document.documentElement.style.setProperty(
-          '--nsd-accent-color','#f1f1f1',
-        );
-
-      } else{
+      if (!this.theme.primaryColor) {
         document.documentElement.style.setProperty(
           '--nsd-accent-color','#000',
         );
@@ -95,9 +94,11 @@ export class NgxSearchDropdownComponent implements OnInit, OnChanges {
         this.theme?.textBlack || '#fff',
       );
 
-      document.documentElement.style.setProperty(
-        '--nsd-accent-color','#f1f1f1',
-      );
+      if (!this.theme.primaryColor) {
+        document.documentElement.style.setProperty(
+          '--nsd-accent-color','#f1f1f1',
+        );
+      }
     }
   }
 
