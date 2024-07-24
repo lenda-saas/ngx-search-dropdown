@@ -5,6 +5,7 @@ section{
   position: relative;
   .input-wrapper{
     display: flex;
+    justify-content: space-between;
     align-items: center;
     padding: 4px 8px;
     border: 1px solid #ced4da;
@@ -13,7 +14,7 @@ section{
       margin-right: 10px;
     }
     input{
-      flex-grow: 1;
+      width: 100%;
       border: none;
       outline: none;
       padding: 8px;
@@ -61,6 +62,5 @@ section{
     color: var(--nsd-accent-color) !important;
     padding: 6px 9px;
     border-radius: 5px;
-    margin-left: 15px;
   }
 }
