@@ -10,6 +10,7 @@
       (focus)="focused()"
       (keyup)="onKeyUp()"
     />
+    <span class="clear" (click)="reset()"><b>&#9932;</b></span>
   </div>
 
   @if (inputValue.length > 0 && searchColumns.length > 0 && showDropdown()) {

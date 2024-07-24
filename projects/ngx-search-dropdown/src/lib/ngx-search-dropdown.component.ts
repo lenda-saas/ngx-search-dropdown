@@ -242,4 +242,10 @@ export class NgxSearchDropdownComponent implements OnInit, OnChanges {
       this.selectedItem.emit(null);
     }
   }
+
+  reset(){
+    this.inputValue = '';
+    this.selectedColumn = '';
+    this.selectedItem.emit(null);
+  }
 }
