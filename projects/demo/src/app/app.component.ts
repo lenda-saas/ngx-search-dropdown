@@ -12,7 +12,7 @@ import { SelectedItem } from '../../../ngx-search-dropdown/src/ngx-search-dropdo
 })
 export class AppComponent {
   title = 'demo';
-  searchColumns = ["FirstName","LastName"];
+  searchColumns = ["Email Address","Invoice Code"];
   placeholder = "Enter Search Term";
   theme:Theme = {
     mode:'dark',

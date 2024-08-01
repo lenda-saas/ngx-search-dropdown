@@ -5,21 +5,18 @@ section{
   position: relative;
   .input-wrapper{
     display: flex;
-    justify-content: space-between;
     align-items: center;
     padding: 4px 8px;
     border: 1px solid #ced4da;
     border-radius: 6px;
-    .prefix{
-      margin-right: 10px;
-    }
+
     input{
-      width: 100%;
       border: none;
       outline: none;
       padding: 8px;
       background-color: transparent;
       color: var(--nsd-text-color);
+      flex-grow: 1;
     }
 
     .clear{
