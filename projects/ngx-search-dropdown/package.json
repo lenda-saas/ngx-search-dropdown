@@ -6,11 +6,25 @@
     "build:prod": "ng build ngx-search-dropdown"
   },
   "peerDependencies": {
-    "@angular/common": "^17.3.0",
-    "@angular/core": "^17.3.0"
+    "@angular/common": "8.0.0 - 17.x.x",
+    "@angular/core": "8.0.0 - 17.x.x"
   },
   "dependencies": {
     "tslib": "^2.3.0"
   },
-  "sideEffects": false
+  "sideEffects": false,
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lenda-saas/ngx-search-dropdown.git"
+  },
+  "author": {
+    "name": "Ekene Chris Ezedi",
+    "email": "e.ezedi@lendastack.io",
+    "url": "https://github.com/chrisezedi"
+  },
+  "keywords": [
+    "dropdown",
+    "select",
+    "search"
+  ]
 }
