@@ -6,8 +6,8 @@
     "build:prod": "ng build ngx-search-dropdown"
   },
   "peerDependencies": {
-    "@angular/common": "8.0.0 - 17.x.x",
-    "@angular/core": "8.0.0 - 17.x.x"
+    "@angular/common": "8.0.0 - 18.x.x",
+    "@angular/core": "8.0.0 - 18.x.x"
   },
   "dependencies": {
     "tslib": "^2.3.0"
