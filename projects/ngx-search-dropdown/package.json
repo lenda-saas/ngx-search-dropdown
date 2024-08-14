@@ -3,7 +3,8 @@
   "version": "1.0.10",
   "scripts": {
     "build:dev": "ng build ngx-search-dropdown --watch --configuration development",
-    "build:prod": "ng build ngx-search-dropdown"
+    "build:prod": "ng build ngx-search-dropdown",
+    "test": "jest"
   },
   "peerDependencies": {
     "@angular/common": "8.0.0 - 18.x.x",
