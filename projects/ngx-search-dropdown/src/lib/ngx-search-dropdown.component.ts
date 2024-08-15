@@ -31,7 +31,7 @@ export type Theme = {
   styleUrl: './ngx-search-dropdown.component.scss',
 })
 export class NgxSearchDropdownComponent implements OnInit, OnChanges {
-  @Input() searchColumns: string[] = [];
+  @Input({required:true}) searchColumns: string[] = [];
 
   @Input() placeholder = 'Enter Keyword';
 

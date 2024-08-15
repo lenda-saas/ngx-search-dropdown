@@ -4,7 +4,8 @@
   "scripts": {
     "build:dev": "ng build ngx-search-dropdown --watch --configuration development",
     "build:prod": "ng build ngx-search-dropdown",
-    "test": "jest"
+    "test": "jest",
+    "test:watch": "jest --watch"
   },
   "peerDependencies": {
     "@angular/common": "8.0.0 - 18.x.x",
