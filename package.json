@@ -8,7 +8,7 @@
     "watch": "ng build --watch --configuration development",
     "build:lib:prod" :"cd projects/ngx-search-dropdown && npm run build:prod",
     "test:lib:ci" :"cd projects/ngx-search-dropdown && npm run test:ci",
-    "publish:lib" :"cd projects/ngx-search-dropdown && npm run publish"
+    "publish:lib" :"cd projects/ngx-search-dropdown && npm run publish-library"
   },
   "private": true,
   "dependencies": {

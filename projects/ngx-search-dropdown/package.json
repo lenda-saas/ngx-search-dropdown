@@ -7,7 +7,7 @@
     "test": "jest",
     "test:watch": "jest --watch",
     "test:ci": "jest --runInBand",
-    "publish": "npm publish"
+    "publish-library": "npm publish"
   },
   "peerDependencies": {
     "@angular/common": "8.0.0 - 18.x.x",
