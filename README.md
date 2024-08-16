@@ -9,6 +9,10 @@
   <a href="https://codecov.io/github/scttcper/ngx-toastr">
     <img src="https://img.shields.io/npm/v/ngx-search-dropdown" alt="npm">
   </a>
+
+  <a href="https://github.com/lenda-saas/ngx-search-dropdown/actions/workflows/npm.yml">
+    <img src="https://github.com/lenda-saas/ngx-search-dropdown/actions/workflows/npm.yml/badge.svg" alt="npm">
+  </a>
   <br/><br/>
 
   <img width="380" alt="image" src="https://github.com/user-attachments/assets/24304cf0-31f4-4f41-afb5-678e14075e0c">
