@@ -1,9 +1,10 @@
 <section>
   <div class="input-wrapper">
     @if (selectedColumn && inputValue.length > 0) {
-    <div class="prefix badge">By: {{ selectedColumn }}</div>
+    <div data-testid="badge" class="prefix badge">By: {{ selectedColumn }}</div>
     }
     <input
+      data-testid="searchInput"
       type="text"
       [placeholder]="placeholder"
       [(ngModel)]="inputValue"
@@ -11,15 +12,15 @@
       (keyup)="onKeyUp()"
     />
     @if (inputValue.length > 0) {
-      <span class="clear" (click)="reset()"><b>&#9932;</b></span>
+    <span class="clear" (click)="reset()"><b>&#9932;</b></span>
     }
   </div>
 
   @if (inputValue.length > 0 && searchColumns.length > 0 && showDropdown()) {
-  <div class="dropdown">
+  <div class="dropdown" data-testid="dropdown">
     @for (item of searchColumns; track $index) {
-    <span class="dropdown-item" (click)="onSelect(item)">
-      <span>{{ inputValue }} <span style="margin: 0 5px;">By:</span></span>
+    <span class="dropdown-item" (click)="onSelect(item)" data-testid="dropdown-item">
+      <span>{{ inputValue }} <span style="margin: 0 5px">By:</span></span>
       <span class="badge">
         {{ item }}
       </span>

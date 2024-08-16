@@ -1,13 +1,17 @@
 {
   "name": "ngx-search-dropdown",
-  "version": "1.0.10",
+  "version": "1.1.10",
   "scripts": {
     "build:dev": "ng build ngx-search-dropdown --watch --configuration development",
-    "build:prod": "ng build ngx-search-dropdown"
+    "build:prod": "ng build ngx-search-dropdown",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:ci": "jest --runInBand",
+    "publish": "npm publish"
   },
   "peerDependencies": {
-    "@angular/common": "8.0.0 - 17.x.x",
-    "@angular/core": "8.0.0 - 17.x.x"
+    "@angular/common": "8.0.0 - 18.x.x",
+    "@angular/core": "8.0.0 - 18.x.x"
   },
   "dependencies": {
     "tslib": "^2.3.0"
