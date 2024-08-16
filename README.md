@@ -3,10 +3,10 @@
   A project for display dropdown values for search inputs
   <br/><br/>
 
-<a href="https://www.npmjs.org/package/ngx-toastr">
+<a href="https://github.com/lenda-saas/ngx-search-dropdown?tab=MIT-1-ov-file#">
     <img src="https://img.shields.io/badge/License-MIT-green.svg" alt="licence">
   </a>
-  <a href="https://codecov.io/github/scttcper/ngx-toastr">
+  <a href="https://codecov.io/github/scttcper/ngx-search-dropdown">
     <img src="https://img.shields.io/npm/v/ngx-search-dropdown" alt="npm">
   </a>
 
