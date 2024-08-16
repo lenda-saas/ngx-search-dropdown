@@ -5,7 +5,9 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
-    "watch": "ng build --watch --configuration development"
+    "watch": "ng build --watch --configuration development",
+    "build:lib:prod" :"cd projects/ngx-search-dropdown && npm run build:prod",
+    "test:lib:ci" :"cd projects/ngx-search-dropdown && npm run test:ci"
   },
   "private": true,
   "dependencies": {
