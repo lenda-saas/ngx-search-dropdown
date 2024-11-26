@@ -12,7 +12,7 @@ import {
   SimpleChanges,
 } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { SelectedItem, Theme } from '@lib-types/ngx-search-dropdown';
+import { SelectedItem, Theme } from '../types/ngx-search-dropdown';
 
 @Component({
   selector: 'ngx-search-dropdown',

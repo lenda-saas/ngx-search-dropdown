@@ -13,7 +13,6 @@
       "ngx-search-dropdown": [
         "./dist/ngx-search-dropdown"
       ],
-      "@lib-types/*": [ "./projects/ngx-search-dropdown/src/types/*" ]
     },
     "esModuleInterop": true,
     "sourceMap": true,
