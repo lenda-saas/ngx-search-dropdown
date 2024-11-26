@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { SelectedItem, Theme } from '../../../ngx-search-dropdown/src/ngx-search-dropdown.types';
+import { SelectedItem, Theme } from '@lib-types/ngx-search-dropdown';
 import { NgxSearchDropdownModule } from '../../../ngx-search-dropdown/src/lib/ngx-search-dropdown.module';
 
 @Component({
