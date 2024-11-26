@@ -13,15 +13,7 @@ import {
 } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { SelectedItem } from '../ngx-search-dropdown.types';
-
-export type Theme = {
-  primaryColor?: string;
-  secondaryColor?: string;
-  accentColor?: string;
-  textLight?: string;
-  textBlack?: string;
-  mode?: 'light' | 'dark';
-};
+import { Theme } from 'ngx-search-dropdown';
 
 @Component({
   selector: 'ngx-search-dropdown',
