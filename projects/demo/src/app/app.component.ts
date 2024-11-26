@@ -1,12 +1,12 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { NgxSearchDropdownComponent, Theme } from 'ngx-search-dropdown';
-import { SelectedItem } from '../../../ngx-search-dropdown/src/ngx-search-dropdown.types';
+import { SelectedItem, Theme } from '@lib-types/ngx-search-dropdown';
+import { NgxSearchDropdownModule } from '../../../ngx-search-dropdown/src/lib/ngx-search-dropdown.module';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, NgxSearchDropdownComponent],
+  imports: [RouterOutlet, NgxSearchDropdownModule],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
