@@ -1,10 +1,8 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { NgxSearchDropdownComponent } from 'ngx-search-dropdown';
-
+import { NgxSearchDropdownComponent } from './ngx-search-dropdown.component';
 
 @NgModule({
-  imports: [CommonModule,NgxSearchDropdownComponent],
+  imports: [NgxSearchDropdownComponent],
   exports: [NgxSearchDropdownComponent]
 })
 export class NgxSearchDropdownModule { }
